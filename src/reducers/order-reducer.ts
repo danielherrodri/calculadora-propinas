@@ -39,13 +39,16 @@ export const orderReducer = (
 
     if (action.type === 'add-tip') {
         return {
-            ...state
+            ...state,
+            tip: action.payload.value
         }
     }
 
     if (action.type === 'place-order') {
         return {
-            ...state
+            ...state,
+            order: [],
+            tipo: 0
         }
     }
 
